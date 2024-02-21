@@ -14,11 +14,11 @@ public class PropertyReader {
 
     public static String readKey(String key) throws Exception {
         FileInputStream fileInputStream = null;
-        Properties p = null;
+        Properties prop= null;
         try {
             fileInputStream = new FileInputStream(new File(System.getProperty("user.dir") + "/src/main/resources/data.properties"));
-            p = new Properties();
-            p.load(fileInputStream);
+            prop= new Properties();
+            prop.load(fileInputStream);
         } catch (IOException ex) {
             ex.printStackTrace();
         } finally {
@@ -27,10 +27,10 @@ public class PropertyReader {
             }
         }
 
-        if (p.getProperty(key) == null) {
-            throw new Exception(p.getProperty(key) + " not found!!");
+        if (prop.getProperty(key) == null) {
+            throw new Exception(prop.getProperty(key) + " not found!!");
         } else {
-            return p.getProperty(key);
+            return prop.getProperty(key);
         }
 
     }
