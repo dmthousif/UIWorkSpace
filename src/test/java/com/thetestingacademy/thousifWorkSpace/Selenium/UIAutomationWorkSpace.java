@@ -1,4 +1,4 @@
-package com.thetestingacademy.vwo.Selenium;
+package com.thetestingacademy.thousifWorkSpace.Selenium;
 
 import com.thetestingacademy.basetest.CommonToAllTest;
 import org.apache.commons.io.FileUtils;
@@ -26,9 +26,10 @@ public class UIAutomationWorkSpace extends CommonToAllTest {
         driver.findElement(By.id("email")).sendKeys("letsbdift");
         driver.findElement(By.id("pass")).sendKeys("pass");
         driver.findElement(By.name("login")).click();
-        File snapshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(snapshot, new File("PathTosaveSnapshot.jpg"));
+
         try {
+            File snapshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(snapshot, new File("PathTosaveSnapshot.jpg"));
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);

@@ -1,4 +1,4 @@
-package com.thetestingacademy.vwo.LoginTests;
+package com.thetestingacademy.thousifWorkSpace.LoginTests;
 
 import com.thetestingacademy.basetest.CommonToAllTest;
 import com.thetestingacademy.pages.PageObjectModel.DashboardPage_POM;

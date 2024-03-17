@@ -1,4 +1,4 @@
-package com.thetestingacademy.vwo.Selenium;
+package com.thetestingacademy.thousifWorkSpace.Selenium;
 
 import com.thetestingacademy.basetest.CommonToAllTest;
 import com.thetestingacademy.utils.PropertyReader;
@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -38,6 +39,12 @@ public class HandlingDropdownsExample extends CommonToAllTest {
             if (value.getText().equals("Flipkart"))
                 value.click();
         }
+
+        //By using select Class
+        Select select = new Select(element);
+        select.selectByIndex(1);
+        select.selectByValue("");
+        select.selectByVisibleText("");
 
         System.out.println("Window Title::"+driver.getTitle());
         driver.navigate().back();

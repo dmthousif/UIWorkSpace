@@ -1,4 +1,4 @@
-package com.thetestingacademy.vwo.Selenium;
+package com.thetestingacademy.thousifWorkSpace.Selenium;
 
 
 import org.openqa.selenium.By;

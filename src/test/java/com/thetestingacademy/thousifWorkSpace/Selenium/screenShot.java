@@ -1,4 +1,4 @@
-package com.thetestingacademy.vwo.Selenium;
+package com.thetestingacademy.thousifWorkSpace.Selenium;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
